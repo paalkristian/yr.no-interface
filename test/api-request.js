@@ -23,7 +23,7 @@ describe('api-request', () => {
 
     request = sinon.stub();
 
-    mod = proxyquire('lib/api-request', {
+    mod = proxyquire('../lib/api-request', {
       request: request
     });
   });

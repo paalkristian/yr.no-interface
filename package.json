@@ -1,15 +1,16 @@
 {
   "name": "yr.no-interface",
   "version": "1.2.0",
-  "description": "HTTP wrapper for the yr.no/api.met.no API with support for streams",
+  "description":
+    "HTTP wrapper for the yr.no/api.met.no API with support for streams",
   "scripts": {
     "test": "npm run lint && npm run unit && npm run coverage",
     "lint": "npm run eslint && npm run linelint",
     "eslint": "eslint index.js test/*.js",
     "linelint": "linelint -l 120 index.js test/*.js",
-    "unit": "NODE_PATH=. mocha test/",
+    "unit": "mocha",
     "coveralls": "npm run coverage && cat coverage/lcov.info | coveralls",
-    "coverage": "NODE_PATH=. nyc mocha test/ && nyc report --reporter=lcov"
+    "coverage": "nyc mocha test/ && nyc report --reporter=lcov"
   },
   "keywords": [
     "yr.no",
@@ -26,18 +27,18 @@
   ],
   "dependencies": {
     "debug": "~2.6.8",
-    "request": "~2.81.0",
+    "request": "^2.87.0",
     "verror": "~1.9.0"
   },
   "devDependencies": {
     "bluebird": "~3.5.0",
     "chai": "~3.5.0",
     "chai-truthy": "~1.0.0",
-    "coveralls": "~2.13.0",
+    "coveralls": "^3.0.1",
     "eslint": "~3.19.0",
     "linelint": "~1.0.1",
-    "mocha": "~3.2.0",
-    "nyc": "~10.2.0",
+    "mocha": "^5.2.0",
+    "nyc": "^13.0.0",
     "proxyquire": "~1.7.11",
     "sinon": "~2.1.0"
   },
